@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TypeQuirk</title>
+	</head>
+
+	<body id='bg' bgcolor="#4D4D4D">
+		<h1 id="heading">Welcome to TypeQuirk! Please select your troll :3</h1>
+
+		<button id='karkButt'>Karkat</button>
+		<button id='solButt'>Sollux</button>
+		<textarea id='input'></textarea>
+		<h2 id='output'></h2>
+
+
+
+	</body>
+	<script src = "sollux.js"> </script>
+	<script type="text/javascript">
+		let $ = (x) => document.getElementById(x)
+		let heading = $('heading')
+		let karkButt = $('karkButt')
+		let input = $('input')
+		let output = $('output')
+		let bg = $('bg')
+		
+
+		karkButt.onclick = () => {
+			heading.innerHTML = 'Your trolltag is carcinoGeneticist and you speak in a manner that is ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.'
+			heading.style.color = "#626262"
+			bg.style.backgroundColor="#EEEEEE"
+			output.style.color = "#626262"
+			output.innerHTML = input.value.toUpperCase()
+		}
+		solButt.onclick = () => {
+			heading.style.color = '#A0A032'
+			heading.innerHTML = 'Your Trolltag is twinArmaggeddons and you tend two 2peak wiith a biit of a lii2p.'
+			output.style.color = '#A0A032'
+			bg.style.backgroundColor = "#000000"
+			output.innerHTML = sollux(input.value)
+		}
+
+
+
+
+	</script>
+
+</html>
