@@ -8,12 +8,17 @@
 	</head>
 
 	<body id='bg' bgcolor="#4D4D4D">
-		<h1 id="heading">Welcome to TypeQuirk! Please select your troll :3</h1>
-
-		<button id='karkButt'>Karkat</button>
-		<button id='solButt'>Sollux</button>
-		<textarea id='input'></textarea>
-		<h2 id='output'></h2>
+		<center>
+			<h1 id="heading">Welcome to TypeQuirk! Please select your troll :3</h1>
+			<!--Change the buttons so they also show the pictures of their respective trolls, either in or next to them.-->
+			<button id='karkButt'>Karkat</button>
+			<button id='solButt'>Sollux</button>
+			<textarea id='input'></textarea>
+			<button id='gamButt'>Gamzee</button>
+			<h2 id='output'></h2>
+			<img id = 'gamgif' src = "gamGee.gif" style ='visibility:hidden'>
+			<h1 id='commentary'></h1>
+		</center>
 
 
 
@@ -21,14 +26,31 @@
 	<script src = "sollux.js"> </script>
 	<script type="text/javascript">
 		let $ = (x) => document.getElementById(x)
+
+		let gamgif = $('gamgif')
 		let heading = $('heading')
 		let karkButt = $('karkButt')
 		let input = $('input')
 		let output = $('output')
 		let bg = $('bg')
+		let gamButt = $('gamButt')
+		let comment = $('commentary')
 		
+		gamButt.onclick = () => {
+			heading.innerHTML = ''
+			output.innerHTML = ''
+			comment.innerHTML = "Sometimes you just like to pick stuff up and watch the colors. It's so beautiful. Life is beautiful."
+			input.style.visibility = 'hidden'
+			bg.style.backgroundColor = '#000000'
+			comment.style.color = '#4F3472'
+			gamgif.style.visibility = 'visible'
+		}
+
 
 		karkButt.onclick = () => {
+			gamgif.style.visibility = 'hidden'
+			input.style.visibility = 'visible'
+			comment.innerHTML = ''
 			heading.innerHTML = 'Your trolltag is carcinoGeneticist and you speak in a manner that is ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.'
 			heading.style.color = "#626262"
 			bg.style.backgroundColor="#EEEEEE"
@@ -36,6 +58,9 @@
 			output.innerHTML = input.value.toUpperCase()
 		}
 		solButt.onclick = () => {
+			gamgif.style.visibility = 'hidden'
+			input.style.visibility = 'visible'
+			comment.innerHTML = ''
 			heading.style.color = '#A0A032'
 			heading.innerHTML = 'Your Trolltag is twinArmaggeddons and you tend two 2peak wiith a biit of a lii2p.'
 			output.style.color = '#A0A032'
