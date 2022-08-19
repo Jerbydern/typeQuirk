@@ -7,7 +7,7 @@
 		<link rel="shortcut icon" href="gamawe.png?">
 	</head>
 
-	<body id='bg' bgcolor="#EEEEEE">
+	<body id='bg' bgcolor="#4D4D4D">
 		<center>
 			<h1 id="heading">Welcome to TypeQuirk! Click your troll's button to convert to their typing quirk! :3</h1>
 			<!--Change the buttons so they also show the pictures of their respective trolls, either in or next to them.-->
@@ -52,8 +52,10 @@
 			gamgif.style.visibility = 'hidden'
 			comment.innerHTML = ''
 			bg.style.backgroundColor = '#EEEEEE'
-			heading.innerHTML = 'Your trolltag is carcinoGeneticist and you speak in a manner that is ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.'
-			heading.style.color = "#626262"
+			heading.style.color = "#000000"
+			heading.innerHTML = 'Your trolltag is <span id="trolltag">carcinoGeneticist</span> and you speak in a manner that is <span id="blurb">ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.</span>'
+			$('trolltag').style.color = '#626262'
+			$('blurb').style.color = '#626262'
 			output.style.color = "#626262"
 			output.innerHTML = input.value.toUpperCase()
 		}
@@ -61,17 +63,21 @@
 			gamgif.style.visibility = 'hidden'
 			comment.innerHTML = ''
 			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#A0A032'
-			heading.innerHTML = 'Your Trolltag is twinArmaggeddons and you tend two 2peak wiith a biit of a lii2p.'
+			heading.style.color = '#000000'
+			heading.innerHTML = 'Your Trolltag is <span id="trolltag">twinArmaggeddons</span> and you <span id="blurb">tend two 2peak wiith a biit of a lii2p.</span>'
 			output.style.color = '#A0A032'
+			$('trolltag').style.color = '#A0A032'
+			$('blurb').style.color = '#A0A032'
 			output.innerHTML = sollux(input.value)
 		}
 		terButt.onclick = () => {
 			gamgif.style.visibility = 'hidden'
 			comment.innerHTML = ''
 			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#388081'
-			heading.innerHTML = 'Your trolltag is gallowsCalibrator and you SP34K W1TH TH3 NUM3R4LS TH3 BL1ND PROPH3TS ONC3 US3D.'
+			heading.style.color = '#000000'
+			heading.innerHTML = 'Your trolltag is <span id = "trolltag">gallowsCalibrator</span> and you <span id="blurb">SP34K W1TH TH3 NUM3R4LS TH3 BL1ND PROPH3TS ONC3 US3D.</span>'
+			$('trolltag').style.color = '#388081'
+			$('blurb').style.color = '#388081'
 			output.style.color = '#388081'
 			output.innerHTML = terezi(input.value)
 		}
@@ -79,8 +85,10 @@
 			gamgif.style.visibility = 'hidden'
 			comment.innerHTML = ''
 			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#9C5E26'
-			heading.innerHTML = 'Your trolltag is adiosToreador and you uHH, sPEAK IN A SORT OF, uHH, fALTERING MANNER,'
+			heading.style.color = '#000000'
+			heading.innerHTML = 'Your trolltag is <span id="trolltag">adiosToreador</span> and you <span id="blurb">uHH, sPEAK IN A SORT OF, uHH, fALTERING MANNER,</span>'
+			$('trolltag').style.color = '#9C5E26'
+			$('blurb').style.color = '#9C5E26'
 			output.style.color = '#9C5E26'
 			output.innerHTML = tavros(input.value)
 		}
