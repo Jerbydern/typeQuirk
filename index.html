@@ -7,12 +7,14 @@
 		<link rel="shortcut icon" href="gamawe.png?">
 	</head>
 
-	<body id='bg' bgcolor="#4D4D4D">
+	<body id='bg' bgcolor="#EEEEEE">
 		<center>
 			<h1 id="heading">Welcome to TypeQuirk! Click your troll's button to convert to their typing quirk! :3</h1>
 			<!--Change the buttons so they also show the pictures of their respective trolls, either in or next to them.-->
 			<button id='karkButt'>Karkat</button>
 			<button id='solButt'>Sollux</button>
+			<button id='terButt'>Terezi</button>
+			<button id='tavButt'>Tavros</button>
 			<textarea id='input'></textarea>
 			<button id='gamButt'>Gamzee</button>
 			<h2 id='output'></h2>
@@ -23,7 +25,7 @@
 
 
 	</body>
-	<script src = "sollux.js"> </script>
+	<script src = "trolls.js"> </script>
 	<script type="text/javascript">
 		let $ = (x) => document.getElementById(x)
 
@@ -39,9 +41,8 @@
 		gamButt.onclick = () => {
 			heading.innerHTML = ''
 			output.innerHTML = ''
-			comment.innerHTML = "Sometimes you just like to pick stuff up and watch the colors. It's so beautiful. Life is beautiful."
-			input.style.visibility = 'hidden'
 			bg.style.backgroundColor = '#000000'
+			comment.innerHTML = "Sometimes you just like to pick stuff up and watch the colors. It's so beautiful. Life is beautiful."
 			comment.style.color = '#4F3472'
 			gamgif.style.visibility = 'visible'
 		}
@@ -49,23 +50,39 @@
 
 		karkButt.onclick = () => {
 			gamgif.style.visibility = 'hidden'
-			input.style.visibility = 'visible'
 			comment.innerHTML = ''
+			bg.style.backgroundColor = '#EEEEEE'
 			heading.innerHTML = 'Your trolltag is carcinoGeneticist and you speak in a manner that is ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.'
 			heading.style.color = "#626262"
-			bg.style.backgroundColor="#EEEEEE"
 			output.style.color = "#626262"
 			output.innerHTML = input.value.toUpperCase()
 		}
 		solButt.onclick = () => {
 			gamgif.style.visibility = 'hidden'
-			input.style.visibility = 'visible'
 			comment.innerHTML = ''
+			bg.style.backgroundColor = '#EEEEEE'
 			heading.style.color = '#A0A032'
 			heading.innerHTML = 'Your Trolltag is twinArmaggeddons and you tend two 2peak wiith a biit of a lii2p.'
 			output.style.color = '#A0A032'
-			bg.style.backgroundColor = "#000000"
 			output.innerHTML = sollux(input.value)
+		}
+		terButt.onclick = () => {
+			gamgif.style.visibility = 'hidden'
+			comment.innerHTML = ''
+			bg.style.backgroundColor = '#EEEEEE'
+			heading.style.color = '#388081'
+			heading.innerHTML = 'Your trolltag is gallowsCalibrator and you SP34K W1TH TH3 NUM3R4LS TH3 BL1ND PROPH3TS ONC3 US3D.'
+			output.style.color = '#388081'
+			output.innerHTML = terezi(input.value)
+		}
+		tavButt.onclick = () =>{
+			gamgif.style.visibility = 'hidden'
+			comment.innerHTML = ''
+			bg.style.backgroundColor = '#EEEEEE'
+			heading.style.color = '#9C5E26'
+			heading.innerHTML = 'Your trolltag is adiosToreador and you uHH, sPEAK IN A SORT OF, uHH, fALTERING MANNER,'
+			output.style.color = '#9C5E26'
+			output.innerHTML = tavros(input.value)
 		}
 
 
