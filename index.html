@@ -37,59 +37,49 @@
 		let bg = $('bg')
 		let gamButt = $('gamButt')
 		let comment = $('commentary')
+
+		let defPage = (bgColor = '#EEEEEE',gif='hidden',headColor='#000000' ) => {
+			gamgif.style.visibility = gif
+			comment.innerHTML = ''
+			bg.style.backgroundColor = bgColor
+			heading.style.color = headColor
+		}
+
+		let paging = (blurb,typeColor) => {
+			heading.innerHTML = blurb
+			$('trolltag').style.color = typeColor
+			$('blurb').style.color = typeColor
+			output.style.color = typeColor
+		}
+
 		
 		gamButt.onclick = () => {
+			defPage('#000000','visible')
 			heading.innerHTML = ''
 			output.innerHTML = ''
-			bg.style.backgroundColor = '#000000'
 			comment.innerHTML = "Sometimes you just like to pick stuff up and watch the colors. It's so beautiful. Life is beautiful."
 			comment.style.color = '#4F3472'
-			gamgif.style.visibility = 'visible'
 		}
 
 
 		karkButt.onclick = () => {
-			gamgif.style.visibility = 'hidden'
-			comment.innerHTML = ''
-			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = "#000000"
-			heading.innerHTML = 'Your trolltag is <span id="trolltag">carcinoGeneticist</span> and you speak in a manner that is <span id="blurb">ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.</span>'
-			$('trolltag').style.color = '#626262'
-			$('blurb').style.color = '#626262'
-			output.style.color = "#626262"
+			defPage()
+			paging('Your trolltag is <span id="trolltag">carcinoGeneticist</span> and you speak in a manner that is <span id="blurb">ALMOST EXCLUSIVELY ORNERY, ALL THE TIME.</span>','#626262')
 			output.innerHTML = input.value.toUpperCase()
 		}
 		solButt.onclick = () => {
-			gamgif.style.visibility = 'hidden'
-			comment.innerHTML = ''
-			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#000000'
-			heading.innerHTML = 'Your Trolltag is <span id="trolltag">twinArmaggeddons</span> and you <span id="blurb">tend two 2peak wiith a biit of a lii2p.</span>'
-			output.style.color = '#A0A032'
-			$('trolltag').style.color = '#A0A032'
-			$('blurb').style.color = '#A0A032'
+			defPage()
+			paging('Your Trolltag is <span id="trolltag">twinArmaggeddons</span> and you <span id="blurb">tend two 2peak wiith a biit of a lii2p.</span>','#A0A032')
 			output.innerHTML = sollux(input.value)
 		}
 		terButt.onclick = () => {
-			gamgif.style.visibility = 'hidden'
-			comment.innerHTML = ''
-			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#000000'
-			heading.innerHTML = 'Your trolltag is <span id = "trolltag">gallowsCalibrator</span> and you <span id="blurb">SP34K W1TH TH3 NUM3R4LS TH3 BL1ND PROPH3TS ONC3 US3D.</span>'
-			$('trolltag').style.color = '#388081'
-			$('blurb').style.color = '#388081'
-			output.style.color = '#388081'
+			defPage()
+			paging('Your trolltag is <span id = "trolltag">gallowsCalibrator</span> and you <span id="blurb">SP34K W1TH TH3 NUM3R4LS TH3 BL1ND PROPH3TS ONC3 US3D.</span>','#388081')
 			output.innerHTML = terezi(input.value)
 		}
 		tavButt.onclick = () =>{
-			gamgif.style.visibility = 'hidden'
-			comment.innerHTML = ''
-			bg.style.backgroundColor = '#EEEEEE'
-			heading.style.color = '#000000'
-			heading.innerHTML = 'Your trolltag is <span id="trolltag">adiosToreador</span> and you <span id="blurb">uHH, sPEAK IN A SORT OF, uHH, fALTERING MANNER,</span>'
-			$('trolltag').style.color = '#9C5E26'
-			$('blurb').style.color = '#9C5E26'
-			output.style.color = '#9C5E26'
+			defPage()
+			paging('Your trolltag is <span id="trolltag">adiosToreador</span> and you <span id="blurb">uHH, sPEAK IN A SORT OF, uHH, fALTERING MANNER,</span>','#9C5E26')
 			output.innerHTML = tavros(input.value)
 		}
 
