@@ -1,0 +1,25 @@
+/*TypeQuirk Stylesheet*/
+.trollButt {
+	box-sizing: border-box;
+	height:40px;
+	width:auto;
+	border-radius: 12px;
+
+}
+#tavButt {
+	color:#9C5E26;
+}
+
+#terButt{
+	color:#388081;
+}
+
+#solButt{
+	color:#A0A032;
+}
+#karkButt{
+	color:#626262;
+}
+#gamButt{
+	color:#4F3472;
+}
