@@ -1,4 +1,13 @@
 /*TypeQuirk Stylesheet*/
+
+.buttZone {
+	display: flex;
+	justify-content: center;
+	gap:30px;
+	padding:20px;
+	flex-wrap:wrap;
+}
+
 .trollButt {
 	box-sizing: border-box;
 	height:40px;
@@ -6,6 +15,7 @@
 	border-radius: 12px;
 
 }
+
 #tavButt {
 	color:#9C5E26;
 }
@@ -20,6 +30,20 @@
 #karkButt{
 	color:#626262;
 }
+
+#input{
+	background:url(./gamAwe.png);
+	color: white;
+	height:1in;
+	width:3in;
+	max-height:1in;
+	max-width:3in;
+	resize:none;
+	border-radius:10px;
+}
+
+
 #gamButt{
 	color:#4F3472;
+	flex:0.5 1 auto;
 }
